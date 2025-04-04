@@ -69,8 +69,11 @@ class _EditorPageState extends State<EditorPage> {
               color: Colors.white,
               child: ListView(
                 padding: const EdgeInsets.all(16),
-                children: droppedBlocks,
+                children: droppedBlocks.isEmpty
+                    ? [const Text("🕳️ لا توجد عناصر مضافة بعد.", style: TextStyle(color: Colors.grey))]
+                    : droppedBlocks,
               ),
+
             ),
           ),
         ],
